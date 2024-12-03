@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 15:41:24 by we                #+#    #+#             */
-/*   Updated: 2024/12/03 16:03:21 by we               ###   ########.fr       */
+/*   Updated: 2024/12/03 16:19:18 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@ using std::cout;
 using std::endl;
 using std::string;
 
-void	Animal::makeSound(void)
+void	Animal::makeSound(void) const
 {
 	cout << _type << ": *animal noises*" << endl;
 }
 
 Animal::Animal(void) : _type("Animal")
 {
-	cout << "Animal constructor called" << endl;
+	cout << "Animal default constructor called" << endl;
 }
 
 Animal::Animal(const Animal &other)
