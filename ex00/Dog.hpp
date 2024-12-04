@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 16:04:53 by we                #+#    #+#             */
-/*   Updated: 2024/12/04 10:00:19 by we               ###   ########.fr       */
+/*   Updated: 2024/12/04 10:27:50 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
 class Dog : public Animal
 {
 	public:
-		void	makeSound(void) const override;
+		void	makeSound(void) const;
 
-		const std::string	&getType(void) const override;
+		const std::string	&getType(void) const;
 
 		Dog(void);
 		Dog(const Dog &other);
