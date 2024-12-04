@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 15:41:22 by we                #+#    #+#             */
-/*   Updated: 2024/12/03 15:44:09 by we               ###   ########.fr       */
+/*   Updated: 2024/12/04 09:49:19 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,8 @@ using std::endl;
 
 int main(void)
 {
+	const Animal *meta = new Animal();
+	const Animal *dog = new Dog();
+	const Animal *cat = new Cat();
 
 }
