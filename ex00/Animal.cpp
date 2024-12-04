@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 15:41:24 by we                #+#    #+#             */
-/*   Updated: 2024/12/04 09:59:07 by we               ###   ########.fr       */
+/*   Updated: 2024/12/04 10:23:24 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,5 @@ Animal::~Animal(void)
 Animal	&Animal::operator = (const Animal &other)
 {
 	_type = other._type;
+	return (*this);
 }

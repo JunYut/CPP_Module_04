@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 15:41:22 by we                #+#    #+#             */
-/*   Updated: 2024/12/04 09:49:19 by we               ###   ########.fr       */
+/*   Updated: 2024/12/04 10:22:31 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,10 @@ int main(void)
 	const Animal *dog = new Dog();
 	const Animal *cat = new Cat();
 
+	cout << dog->getType() << " " << endl;
+	cout << cat->getType() << " " << endl;
+	dog->makeSound();
+	cat->makeSound();
+
+	return (0);
 }
