@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 09:39:00 by we                #+#    #+#             */
-/*   Updated: 2024/12/04 10:27:46 by we               ###   ########.fr       */
+/*   Updated: 2024/12/04 15:54:49 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # define CAT_HPP
 
 # include "Animal.hpp"
+# include "Brain.hpp"
 
 class Cat : public Animal
 {
@@ -28,6 +29,9 @@ class Cat : public Animal
 		~Cat(void);
 
 		Cat	&operator = (const Cat &other);
+
+	private:
+		Brain	*_brain;
 };
 
 # endif

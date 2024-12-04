@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 09:41:55 by we                #+#    #+#             */
-/*   Updated: 2024/12/04 10:29:18 by we               ###   ########.fr       */
+/*   Updated: 2024/12/04 15:56:24 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ Cat::Cat(void)
 {
 	cout << "Cat default constructor called" << endl;
 	_type = "Cat";
+	_brain = new Brain();
 }
 
 Cat::Cat(const Cat &other) : Animal(other)
@@ -41,6 +42,7 @@ Cat::Cat(const Cat &other) : Animal(other)
 Cat::~Cat(void)
 {
 	cout << "Cat destructor called" << endl;
+	delete _brain;
 }
 
 Cat	&Cat::operator = (const Cat &other)

@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 16:06:25 by we                #+#    #+#             */
-/*   Updated: 2024/12/04 10:29:29 by we               ###   ########.fr       */
+/*   Updated: 2024/12/04 15:56:38 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ Dog::Dog(void)
 {
 	cout << "Dog default constructor called" << endl;
 	_type = "Dog";
+	_brain = new Brain();
 }
 
 Dog::Dog(const Dog &other) : Animal(other)
@@ -41,6 +42,7 @@ Dog::Dog(const Dog &other) : Animal(other)
 Dog::~Dog(void)
 {
 	cout << "Dog destructor called" << endl;
+	delete _brain;
 }
 
 Dog	&Dog::operator = (const Dog &other)

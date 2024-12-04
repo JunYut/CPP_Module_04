@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 15:41:22 by we                #+#    #+#             */
-/*   Updated: 2024/12/04 15:30:39 by we               ###   ########.fr       */
+/*   Updated: 2024/12/04 16:01:06 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,12 @@ int main(void)
 	cout << endl;
 	{
 		Animal *animal[10];
-		int i = -1;
+		int i = 0;
 
 		while (i < 5)
-			animal[++i] = new Dog();
+			animal[i++] = new Dog();
 		while (i < 10)
-			animal[++i] = new Cat();
+			animal[i++] = new Cat();
 
 		animal[0]->makeSound();
 		animal[9]->makeSound();

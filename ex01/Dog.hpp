@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 16:04:53 by we                #+#    #+#             */
-/*   Updated: 2024/12/04 10:27:50 by we               ###   ########.fr       */
+/*   Updated: 2024/12/04 15:53:40 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # define DOG_HPP
 
 # include "Animal.hpp"
+# include "Brain.hpp"
 
 class Dog : public Animal
 {
@@ -28,6 +29,9 @@ class Dog : public Animal
 		~Dog(void);
 
 		Dog	&operator = (const Dog &other);
+
+	private:
+		Brain	*_brain;
 };
 
 # endif
