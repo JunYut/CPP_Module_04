@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 15:41:22 by we                #+#    #+#             */
-/*   Updated: 2024/12/04 10:22:31 by we               ###   ########.fr       */
+/*   Updated: 2024/12/04 10:32:16 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,11 @@ int main(void)
 	cout << cat->getType() << " " << endl;
 	dog->makeSound();
 	cat->makeSound();
+	meta->makeSound();
+
+	delete meta;
+	delete dog;
+	delete cat;
 
 	return (0);
 }

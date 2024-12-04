@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 15:41:23 by we                #+#    #+#             */
-/*   Updated: 2024/12/04 09:58:09 by we               ###   ########.fr       */
+/*   Updated: 2024/12/04 10:33:25 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Animal
 
 		Animal(void);
 		Animal(const Animal &other);
-		~Animal(void);
+		virtual ~Animal(void);
 
 		Animal &operator = (const Animal &other);
 
