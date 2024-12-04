@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 15:41:23 by we                #+#    #+#             */
-/*   Updated: 2024/12/03 16:15:05 by we               ###   ########.fr       */
+/*   Updated: 2024/12/04 09:58:09 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ class Animal
 {
 	public:
 		virtual void	makeSound(void) const;
+
+		virtual const std::string	&getType(void) const;
 
 		Animal(void);
 		Animal(const Animal &other);
