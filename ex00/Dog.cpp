@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 16:06:25 by we                #+#    #+#             */
-/*   Updated: 2024/12/04 10:23:29 by we               ###   ########.fr       */
+/*   Updated: 2024/12/04 10:29:29 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Dog::Dog(void)
 	_type = "Dog";
 }
 
-Dog::Dog(const Dog &other)
+Dog::Dog(const Dog &other) : Animal(other)
 {
 	cout << "Dog copy constructor called" << endl;
 	*this = other;

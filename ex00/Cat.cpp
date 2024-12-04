@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 09:41:55 by we                #+#    #+#             */
-/*   Updated: 2024/12/04 10:23:32 by we               ###   ########.fr       */
+/*   Updated: 2024/12/04 10:29:18 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Cat::Cat(void)
 	_type = "Cat";
 }
 
-Cat::Cat(const Cat &other)
+Cat::Cat(const Cat &other) : Animal(other)
 {
 	cout << "Cat copy constructor called" << endl;
 	*this = other;
