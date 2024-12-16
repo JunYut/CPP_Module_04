@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 15:41:22 by we                #+#    #+#             */
-/*   Updated: 2024/12/14 15:29:08 by we               ###   ########.fr       */
+/*   Updated: 2024/12/16 09:18:58 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,13 @@ int main(void)
 		for (i = 0; i < 10; ++i)
 			delete animal[i];
 	}
-	cout << "\n_____ASSIGNMENT TEST_____" << endl;
+	cout << endl;
 	{
-		Animal *a = new Animal;
-		a->makeSound();
-		Animal *b = new Animal(*a);
-		b->makeSound();
-		delete a;
-		delete b;
+		Cat a;
+		a.think();
+
+		Cat b = a;
+		b.think();
 	}
 
 	return (0);
