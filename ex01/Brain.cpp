@@ -6,26 +6,28 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 14:59:50 by we                #+#    #+#             */
-/*   Updated: 2024/12/04 15:50:18 by we               ###   ########.fr       */
+/*   Updated: 2024/12/16 08:49:32 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "Brain.hpp"
+# include <cstdlib>
+# include <ctime>
+# include <unistd.h>
 
 using std::cout;
 using std::endl;
-using std::stringstream;
+
+/*
+	Constructors , Destructor & Operators
+*/
 
 Brain::Brain(void)
 {
 	cout << "Brain default constructor called" << endl;
-	stringstream	ss;
-
-	for (int i = 0; i < 100; ++i)
-	{
-		ss << i;
-		_ideas[i] = "idea " + ss.str();
-	}
+	int	i = -1;
+	while (++i < 100)
+		_ideas[i] = _ideaGenerator();
 }
 
 Brain::Brain(const Brain &other)
@@ -47,4 +49,41 @@ Brain	&Brain::operator = (const Brain &other)
 		_ideas[i] = other._ideas[i];
 
 	return (*this);
+}
+
+/*
+	Getters & Setters
+*/
+
+/*
+	Member Functions
+*/
+
+string	Brain::_ideaGenerator() const
+{
+	srand((unsigned)time(NULL) * getpid());
+
+	string	tmp;
+	int		min = 4;
+	int		max = 12;
+	int		random = min + rand() % (max - min + 1);
+	static const char alphanum[] =
+		"0123456789"
+		"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+		"abcdefghijklmnopqrstuvwxyz";
+
+	tmp.reserve(random);
+	for (int i = 0; i < random; ++i)
+		tmp += alphanum[rand() % (sizeof(alphanum) - 1)];
+
+	return tmp;
+}
+
+string	Brain::getRandomIdea() const
+{
+	int min = 0;
+	int max = 99;
+	int random = min + rand() % (max - min + 1);
+
+	return _ideas[random];
 }
