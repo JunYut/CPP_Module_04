@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 09:41:55 by we                #+#    #+#             */
-/*   Updated: 2024/12/16 09:10:39 by we               ###   ########.fr       */
+/*   Updated: 2024/12/18 23:31:43 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,15 @@ Cat::~Cat(void)
 {
 	cout << "Cat destructor called" << endl;
 	delete _brain;
+	_brain = NULL;
 }
 
 Cat	&Cat::operator = (const Cat &other)
 {
-	_type = other._type;
+	if (&other != this)
+	{
+		_type = other._type;
+		_brain = new Brain(*other._brain);
+	}
 	return (*this);
 }

@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 15:41:22 by we                #+#    #+#             */
-/*   Updated: 2024/12/16 09:18:58 by we               ###   ########.fr       */
+/*   Updated: 2024/12/18 23:40:46 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,19 +31,61 @@ int main(void)
 		while (i < 10)
 			animal[i++] = new Cat();
 
-		animal[0]->makeSound();
-		animal[9]->makeSound();
+		for (i =0; i < 10; ++i)
+			animal[i]->makeSound();
 
 		for (i = 0; i < 10; ++i)
 			delete animal[i];
 	}
-	cout << endl;
+	cout << "\n_____CAT ASSIGNMENT OPERATOR_____" << endl;
 	{
 		Cat a;
 		a.think();
 
 		Cat b = a;
 		b.think();
+	}
+	cout << "\n_____CAT COPY CONSTRUCTOR_____" << endl;
+	{
+		Cat a;
+		a.think();
+
+		Cat b(a);
+		b.think();
+	}
+	cout << "\n_____CAT ALLOCATE_____" << endl;
+	{
+		Cat a;
+		a.think();
+
+		Cat *b = new Cat(a);
+		b->think();
+		delete b;
+	}
+	cout << "\n_____DOG ASSIGNMENT OPERATOR_____" << endl;
+	{
+		Dog a;
+		a.think();
+
+		Dog b = a;
+		b.think();
+	}
+	cout << "\n_____DOG COPY CONSTRUCTOR_____" << endl;
+	{
+		Dog a;
+		a.think();
+
+		Dog b(a);
+		b.think();
+	}
+	cout << "\n_____DOG ALLOCATE_____" << endl;
+	{
+		Dog a;
+		a.think();
+
+		Dog *b = new Dog(a);
+		b->think();
+		delete b;
 	}
 
 	return (0);

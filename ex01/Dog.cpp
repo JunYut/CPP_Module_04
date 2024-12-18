@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/03 16:06:25 by we                #+#    #+#             */
-/*   Updated: 2024/12/16 09:10:57 by we               ###   ########.fr       */
+/*   Created: 2024/12/04 09:41:55 by we                #+#    #+#             */
+/*   Updated: 2024/12/18 23:33:46 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ using std::string;
 
 void	Dog::think(void) const
 {
-	cout << "Cat: " + _brain->getRandomIdea() << endl;
+	cout << "Dog: " + _brain->getRandomIdea() << endl;
 }
 
 void	Dog::makeSound(void) const
 {
-	cout << _type << ": Bark! Bark! Bark!" << endl;
+	cout << _type << ": Barf ! Barf !" << endl;
 }
 
 const string	&Dog::getType(void) const
@@ -48,10 +48,15 @@ Dog::~Dog(void)
 {
 	cout << "Dog destructor called" << endl;
 	delete _brain;
+	_brain = NULL;
 }
 
 Dog	&Dog::operator = (const Dog &other)
 {
-	_type = other._type;
+	if (&other != this)
+	{
+		_type = other._type;
+		_brain = new Brain(*other._brain);
+	}
 	return (*this);
 }
