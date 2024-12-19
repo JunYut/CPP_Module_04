@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 09:41:55 by we                #+#    #+#             */
-/*   Updated: 2024/12/19 08:39:20 by we               ###   ########.fr       */
+/*   Updated: 2024/12/19 10:08:08 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ using std::string;
 
 void	Cat::think(void) const
 {
-	cout << "Cat: " + _brain->getRandomIdea() << endl;
+	cout << "Cat: " + _brain->getIdea() << endl;
 }
 
 void	Cat::makeSound(void) const

@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 14:59:22 by we                #+#    #+#             */
-/*   Updated: 2024/12/16 08:48:04 by we               ###   ########.fr       */
+/*   Updated: 2024/12/19 10:08:08 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Brain
 
 		Brain	&operator = (const Brain &other);
 
-		string	getRandomIdea() const;
+		string	getIdea() const;
 
 	private:
 		string	_ideas[100];

@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 09:41:55 by we                #+#    #+#             */
-/*   Updated: 2024/12/19 08:39:59 by we               ###   ########.fr       */
+/*   Updated: 2024/12/19 10:08:08 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ using std::string;
 
 void	Dog::think(void) const
 {
-	cout << "Dog: " + _brain->getRandomIdea() << endl;
+	cout << "Dog: " + _brain->getIdea() << endl;
 }
 
 void	Dog::makeSound(void) const

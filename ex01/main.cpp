@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 15:41:22 by we                #+#    #+#             */
-/*   Updated: 2024/12/19 09:06:10 by we               ###   ########.fr       */
+/*   Updated: 2024/12/19 09:45:44 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,15 @@ int main(void)
 		Cat b(a);
 		b.think();
 	}
+	cout << "\n_____CAT COPY CONSTRUCTOR_____" << endl;
+	{
+		Cat a;
+		a.think();
+
+		Cat b;
+		b = a;
+		b.think();
+	}
 	cout << "\n_____CAT ALLOCATE_____" << endl;
 	{
 		Cat a;
@@ -69,7 +78,7 @@ int main(void)
 
 		Cat *b = new Cat(*a);
 		b->think();
-		
+
 		delete a;
 		delete b;
 	}

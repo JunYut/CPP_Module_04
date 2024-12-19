@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 14:59:50 by we                #+#    #+#             */
-/*   Updated: 2024/12/16 08:49:32 by we               ###   ########.fr       */
+/*   Updated: 2024/12/19 10:08:08 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ string	Brain::_ideaGenerator() const
 	return tmp;
 }
 
-string	Brain::getRandomIdea() const
+string	Brain::getIdea() const
 {
 	int min = 0;
 	int max = 99;
