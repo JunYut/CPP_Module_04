@@ -26,8 +26,27 @@ contains a hidden pointer (vptr) to the vtable of its class.
  the vtable, and the correct function (based on the actual object type) is
  called.
 
-## FAQ
-### 1. Why use pointers/references to the base class to refer to objects of derived classes ?
+# Abstract Class & Pure Abstract Class
+**Abstract Class** is a class that contains at least one pure virtual function. It cannot be instantiated directly and is intended to be used as a base class for other classes. However, an abstract class can also contain non-pure virtual functions and concrete (non-virtual) member functions.
+
+**Pure Abstract Class** is a special type of abstract class that contains only pure virtual functions. It serves as a strict interface, requiring derived classes to provide implementations for all its pure virtual functions. A pure abstract class cannot have any concrete member functions.
+
+## Key Differences
+### 1. Pure Virtual Functions
+**Abstract Class**: Contains at least one pure virtual function but can also have non-pure virtual functions and concrete member functions.
+
+**Pure Abstract Class**: Contains only pure virtual functions and no concrete member functions.
+
+### 2. Instantiation:
+Both abstract and pure abstract classes cannot be instantiated directly.
+
+### 3. Usage
+**Abstract Class**: Can provide some default behavior through non-pure virtual functions and concrete member functions.
+
+**Pure Abstract Class**: Defines a strict interface with no default behavior, requiring derived classes to implement all functionality.
+
+# FAQ
+## 1. Why use pointers/references to the base class to refer to objects of derived classes ?
 - Using base class pointers or references enables polymorphism, allowing for
 dynamic dispatch and flexible behavior.
 - It promotes code reusability by enabling generic functions and algorithms.
