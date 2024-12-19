@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 16:04:53 by we                #+#    #+#             */
-/*   Updated: 2024/12/16 09:09:24 by we               ###   ########.fr       */
+/*   Updated: 2024/12/19 08:41:15 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ class Dog : public Animal
 	public:
 		void	think(void) const;
 		void	makeSound(void) const;
-
-		const std::string	&getType(void) const;
 
 		Dog(void);
 		Dog(const Dog &other);

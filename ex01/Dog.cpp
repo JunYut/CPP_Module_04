@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 09:41:55 by we                #+#    #+#             */
-/*   Updated: 2024/12/18 23:33:46 by we               ###   ########.fr       */
+/*   Updated: 2024/12/19 08:40:52 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,6 @@ void	Dog::think(void) const
 void	Dog::makeSound(void) const
 {
 	cout << _type << ": Barf ! Barf !" << endl;
-}
-
-const string	&Dog::getType(void) const
-{
-	return (_type);
 }
 
 Dog::Dog(void)

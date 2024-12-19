@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 16:06:25 by we                #+#    #+#             */
-/*   Updated: 2024/12/04 10:29:29 by we               ###   ########.fr       */
+/*   Updated: 2024/12/19 08:41:38 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,6 @@ using std::string;
 void	Dog::makeSound(void) const
 {
 	cout << _type << ": Bark! Bark! Bark!" << endl;
-}
-
-const string	&Dog::getType(void) const
-{
-	return (_type);
 }
 
 Dog::Dog(void)

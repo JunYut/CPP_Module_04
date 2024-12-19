@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 09:41:55 by we                #+#    #+#             */
-/*   Updated: 2024/12/04 10:29:18 by we               ###   ########.fr       */
+/*   Updated: 2024/12/19 08:41:28 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,6 @@ using std::string;
 void	Cat::makeSound(void) const
 {
 	cout << _type << ": Meow~" << endl;
-}
-
-const string	&Cat::getType(void) const
-{
-	return (_type);
 }
 
 Cat::Cat(void)
