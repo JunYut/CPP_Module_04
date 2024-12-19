@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 15:41:22 by we                #+#    #+#             */
-/*   Updated: 2024/12/18 23:40:46 by we               ###   ########.fr       */
+/*   Updated: 2024/12/19 09:06:10 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,17 @@ int main(void)
 		b->think();
 		delete b;
 	}
+	cout << "\n_____CAT ALLOCATE 2_____" << endl;
+	{
+		Cat *a = new Cat();
+		a->think();
+
+		Cat *b = new Cat(*a);
+		b->think();
+		
+		delete a;
+		delete b;
+	}
 	cout << "\n_____DOG ASSIGNMENT OPERATOR_____" << endl;
 	{
 		Dog a;
@@ -85,6 +96,17 @@ int main(void)
 
 		Dog *b = new Dog(a);
 		b->think();
+		delete b;
+	}
+	cout << "\n_____DOG ALLOCATE 2_____" << endl;
+	{
+		Dog *a = new Dog();
+		a->think();
+
+		Dog *b = new Dog(*a);
+		b->think();
+
+		delete a;
 		delete b;
 	}
 
