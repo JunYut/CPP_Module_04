@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 15:41:22 by we                #+#    #+#             */
-/*   Updated: 2024/12/19 09:45:44 by we               ###   ########.fr       */
+/*   Updated: 2024/12/19 10:34:42 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ int main(void)
 	cout << "\n_____CAT ASSIGNMENT OPERATOR_____" << endl;
 	{
 		Cat a;
+		a.getBrain()->setIdea("sus");
 		a.think();
 
 		Cat b = a;
@@ -48,14 +49,16 @@ int main(void)
 	cout << "\n_____CAT COPY CONSTRUCTOR_____" << endl;
 	{
 		Cat a;
+		a.getBrain()->setIdea("amogus");
 		a.think();
 
 		Cat b(a);
 		b.think();
 	}
-	cout << "\n_____CAT COPY CONSTRUCTOR_____" << endl;
+	cout << "\n_____CAT INIT THEN ASSIGN_____" << endl;
 	{
 		Cat a;
+		a.getBrain()->setIdea("awoo");
 		a.think();
 
 		Cat b;
@@ -65,6 +68,7 @@ int main(void)
 	cout << "\n_____CAT ALLOCATE_____" << endl;
 	{
 		Cat a;
+		a.getBrain()->setIdea("skibidi");
 		a.think();
 
 		Cat *b = new Cat(a);
@@ -74,6 +78,7 @@ int main(void)
 	cout << "\n_____CAT ALLOCATE 2_____" << endl;
 	{
 		Cat *a = new Cat();
+		a->getBrain()->setIdea("updog");
 		a->think();
 
 		Cat *b = new Cat(*a);
@@ -85,6 +90,7 @@ int main(void)
 	cout << "\n_____DOG ASSIGNMENT OPERATOR_____" << endl;
 	{
 		Dog a;
+		a.getBrain()->setIdea("sus");
 		a.think();
 
 		Dog b = a;
@@ -93,14 +99,26 @@ int main(void)
 	cout << "\n_____DOG COPY CONSTRUCTOR_____" << endl;
 	{
 		Dog a;
+		a.getBrain()->setIdea("amogus");
 		a.think();
 
 		Dog b(a);
 		b.think();
 	}
+	cout << "\n_____DOG INIT THEN ASSIGN_____" << endl;
+	{
+		Dog a;
+		a.getBrain()->setIdea("awoo");
+		a.think();
+
+		Dog b;
+		b = a;
+		b.think();
+	}
 	cout << "\n_____DOG ALLOCATE_____" << endl;
 	{
 		Dog a;
+		a.getBrain()->setIdea("skibidi");
 		a.think();
 
 		Dog *b = new Dog(a);
@@ -110,6 +128,7 @@ int main(void)
 	cout << "\n_____DOG ALLOCATE 2_____" << endl;
 	{
 		Dog *a = new Dog();
+		a->getBrain()->setIdea("updog");
 		a->think();
 
 		Dog *b = new Dog(*a);
