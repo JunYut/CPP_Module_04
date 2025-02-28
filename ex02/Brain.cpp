@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 14:59:50 by we                #+#    #+#             */
-/*   Updated: 2024/12/19 10:08:08 by we               ###   ########.fr       */
+/*   Updated: 2025/02/28 11:16:29 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,15 @@ Brain	&Brain::operator = (const Brain &other)
 	Getters & Setters
 */
 
+string	Brain::getIdea() const
+{
+	int min = 0;
+	int max = 99;
+	int random = min + rand() % (max - min + 1);
+
+	return _ideas[random];
+}
+
 /*
 	Member Functions
 */
@@ -77,13 +86,4 @@ string	Brain::_ideaGenerator() const
 		tmp += alphanum[rand() % (sizeof(alphanum) - 1)];
 
 	return tmp;
-}
-
-string	Brain::getIdea() const
-{
-	int min = 0;
-	int max = 99;
-	int random = min + rand() % (max - min + 1);
-
-	return _ideas[random];
 }

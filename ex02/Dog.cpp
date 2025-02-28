@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 09:41:55 by we                #+#    #+#             */
-/*   Updated: 2024/12/19 10:36:48 by we               ###   ########.fr       */
+/*   Updated: 2025/02/28 11:17:07 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ using std::string;
 
 void	Dog::think(void) const
 {
-	cout << "Dog: " + _brain->getIdea(0) << endl;
+	cout << "Dog: " + _brain->getIdea() << endl;
 }
 
 void	Dog::makeSound(void) const

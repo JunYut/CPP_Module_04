@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 09:41:55 by we                #+#    #+#             */
-/*   Updated: 2024/12/19 10:29:47 by we               ###   ########.fr       */
+/*   Updated: 2025/02/28 11:16:58 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ using std::string;
 
 void	Cat::think(void) const
 {
-	cout << "Cat: " + _brain->getIdea(0) << endl;
+	cout << "Cat: " + _brain->getIdea() << endl;
 }
 
 void	Cat::makeSound(void) const
